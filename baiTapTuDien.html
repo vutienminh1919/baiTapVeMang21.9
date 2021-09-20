@@ -5,21 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="EN">
-<input type="button" onclick="translate()" value="Translate">
+
+<input type="text" id="eng">
+<input type="button" id="" onclick="dd()" value="Translate" >
 <p id="result"></p>
 <script>
-    function translate() {
-        let a = document.getElementById('EN').value
-        let English = [1, 2, 3, 4, 5, 6]
-        let Vn = ["một", "hai", "ba", "bốn", "năm", "sáu"]
-        for (let i = 0; i < English.length; i++) {
-            if (a === English[i]) {
-                document.getElementById('result').innerText = Vn[i]
-            } else {
-                document.getElementById('result').innerText = 'no result'
+    let e = ['one', 'two', 'three', 'four', 'six'];
+    let  v = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu'];
+    function dd() {
+        let a = document.getElementById('eng').value
+        for (let i = 0; i < e.length; i++) {
+            if (a === e[i]) {
+                document.getElementById('result').innerHTML = ' dich ra tieng viet la '+ v[i]
             }
-        }}
+        }
+    }
+
+
 
 
 </script>
