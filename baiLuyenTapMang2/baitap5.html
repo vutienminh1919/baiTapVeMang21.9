@@ -8,27 +8,30 @@
 <script>
     //Viết một chương trình nhập vào 2 chuỗi,
     // sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
-    let a = prompt('nhap chuoi thu nhat')
-    let b = prompt('nhap chuoi thu hai')
+    let strA = prompt('nhap chuoi thu nhat')
+    let a = strA.split('')
+    let strB = prompt('nhap chuoi thu hai')
+    let b = strB.split('')
     let check = false
     document.write('chuoi thu nhat la ' + a + "<br>" + 'chuoi thu hai la ' + b + "<br>")
     if (a.length !== b.length) {
         document.write('Hai chuoi khong giong nhau')
-    }else {
-    for (let i = 0; i < a.length; i++) {
-        for (let j = 0; j < b.length; j++) {
-            if (a[i] === a[j]) {
-                check = true
-            } else {
-                check = false
+    } else {
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < b.length; j++) {
+                if (a[i] === b[j]) {
+                    check = true
+                } else {
+                    check = false
+                }
             }
         }
-        }
-        if (check === false) {
-            document.write('hai chuoi khac nhau')
+        if (check === true) {
+            document.write('hai chuoi giong nhau')
         } else {
-            document.write('hai chuoi giong nhau ')
+            document.write('hai chuoi khac nhau ')
         }
+
     }
 
 

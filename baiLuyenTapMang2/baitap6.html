@@ -7,14 +7,14 @@
 <body>
 <script>
 
-    let str = prompt('nhap vao chuoi')
-    let a = str.split('')
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] === '-') {
-            a[i] === '_';
-        }
-    }
-    document.write(a.join(','))
+   let str = prompt('nhap vao chuoi')
+   let a = str.split('')
+   for (let i = 0; i < a.length; i++) {
+       if (a[i] === '-') {
+           a[i] = '_'
+       }
+   }
+   document.write(a.join(','))
 
 
 </script>
