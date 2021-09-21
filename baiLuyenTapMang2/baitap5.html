@@ -14,7 +14,7 @@
     document.write('chuoi thu nhat la ' + a + "<br>" + 'chuoi thu hai la ' + b + "<br>")
     if (a.length !== b.length) {
         document.write('Hai chuoi khong giong nhau')
-    }
+    }else {
     for (let i = 0; i < a.length; i++) {
         for (let j = 0; j < b.length; j++) {
             if (a[i] === a[j]) {
@@ -22,7 +22,7 @@
             } else {
                 check = false
             }
-
+        }
         }
         if (check === false) {
             document.write('hai chuoi khac nhau')
