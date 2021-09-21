@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó.
+    // In ra giá trị trung bình của các phần tử trong mảng.
+    let a = [1,4,9,11,66,50,99,80,-6,-88]
+    let max = a[0]
+    let sum = 0
+    let count = 0
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i]
+        }sum = sum +a[i]
+        count++
+    }document.write('mảng là '+ a + '<hr>')
+    document.write('giá trị max của chuỗi là '+ max + '<hr>')
+    document.write('giá trị trung bình của mảng là '+ sum/count)
+
+
+
+</script>
+
+</body>
+</html>
