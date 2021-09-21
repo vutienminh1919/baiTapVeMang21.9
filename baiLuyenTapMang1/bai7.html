@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check()">CHECK</button>
+<button onclick="add()">INSERT</button><br>
+<p id="result"></p>
+
+<script>
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+
+    let a = []
+    function add(){
+    for (let i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt('nhap cac so'))
+    }}
+    function check() {
+        let b = parseInt(prompt('nhap so can check'))
+        let check = false
+        for (let i = 0; i < 10; i++) {
+            if (a[i] === b) {
+                document.getElementById('result').innerHTML = b+ ' is in the array '+ "<br>"
+                check = true
+                break
+            }document.getElementById('result').innerHTML = a
+        }
+        if (check === false) {
+            document.write(b + " is not in the array")
+        }
+    }
+
+</script>
+
+</body>
+</html>

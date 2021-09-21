@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    // Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    let a = []
+        for (let i = 0; i < 10; i++) {
+            a[i] = parseInt(prompt('nhap vao mang so'))
+        }
+        document.write('mang ban dau la ' + a + "<hr>")
+    let soSanh = (x,y)=> x-y
+    document.write('mang da sap xep la '+ a.sort(soSanh))
+
+
+</script>
+
+</body>
+</html>

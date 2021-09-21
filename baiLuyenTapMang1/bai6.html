@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="" onclick="check()">CHECK</button>
+<br>
+
+<script>
+    let a = []
+    for (let i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt('nhap cac so'))
+    }
+
+    function check() {
+        let b = parseInt(prompt('nhap so can check'))
+        let check = false
+        for (let i = 0; i < 10; i++) {
+            if (a[i] === b) {
+                document.write(b + " is in the array")
+                check = true
+                break
+            }
+        }
+        if (check === false) {
+            document.write(b + " is not in the array")
+        }
+    }
+
+</script>
+
+</body>
+</html>

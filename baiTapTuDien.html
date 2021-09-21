@@ -7,21 +7,26 @@
 <body>
 
 <input type="text" id="eng">
-<input type="button" id="" onclick="dd()" value="Translate" >
+<input type="button" id="" onclick="dd()" value="Translate">
 <p id="result"></p>
 <script>
     let e = ['one', 'two', 'three', 'four', 'six'];
-    let  v = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu'];
+    let v = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu'];
+
     function dd() {
         let a = document.getElementById('eng').value
+        let check = false
         for (let i = 0; i < e.length; i++) {
             if (a === e[i]) {
-                document.getElementById('result').innerHTML = ' dich ra tieng viet la '+ v[i]
+                document.getElementById('result').innerHTML = ' dich ra tieng viet la ' + v[i]
+                check = true
+                break
             }
         }
+        if (check === false) {
+            document.getElementById('result').innerHTML = 'no result'
+        }
     }
-
-
 
 
 </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = []
+    let b = []
+    let c = []
+    for (let i = 0; i < 10; i++) {
+        a[i] = parseInt(prompt('nhap vao mang thu nhat'))
+    }
+    document.write('mang thu nhat ' + a + "<hr>")
+    for (let j = 0; j < 10; j++) {
+        b[j] = parseInt(prompt('nhap vao mang thu hai'))
+    }
+    document.write('mang thu hai ' + b + "<hr>")
+    c = a
+    for (let i = 0; i < b.length; i++) {
+        c.push(b[i])
+    }
+    document.write('mang thu ba la ' + c)
+
+
+</script>
+
+</body>
+</html>
