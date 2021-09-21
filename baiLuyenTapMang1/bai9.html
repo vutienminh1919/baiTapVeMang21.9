@@ -8,7 +8,7 @@
 <script>
     let a = []
     let b = []
-    let c = []
+    let c = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     for (let i = 0; i < 10; i++) {
         a[i] = parseInt(prompt('nhap vao mang thu nhat'))
     }
@@ -17,10 +17,7 @@
         b[j] = parseInt(prompt('nhap vao mang thu hai'))
     }
     document.write('mang thu hai ' + b + "<hr>")
-    c = a
-    for (let i = 0; i < b.length; i++) {
-        c.push(b[i])
-    }
+    c =c.concat(a.concat(b))
     document.write('mang thu ba la ' + c)
 
 

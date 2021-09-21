@@ -6,32 +6,58 @@
 </head>
 <body>
 <button onclick="check()">CHECK</button>
-<button onclick="add()">INSERT</button><br>
+<button onclick="add()">INSERT</button>
+<br>
 <p id="result"></p>
 
 <script>
     //Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
     // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    //
+    // let a = []
+    // function add(){
+    // for (let i = 0; i < 10; i++) {
+    //     a[i] = parseInt(prompt('nhap cac so'))
+    // }}
+    // function check() {
+    //     let b = parseInt(prompt('nhap so can check'))
+    //     let check = false
+    //     for (let i = 0; i < 10; i++) {
+    //         if (a[i] === b) {
+    //             document.getElementById('result').innerHTML = b+ ' is in the array '+ "<br>"
+    //             check = true
+    //             break
+    //         }document.getElementById('result').innerHTML = a
+    //     }
+    //     if (check === false) {
+    //         document.write(b + " is not in the array")
+    //     }
+    // }
 
+    // chữa bài
     let a = []
-    function add(){
-    for (let i = 0; i < 10; i++) {
-        a[i] = parseInt(prompt('nhap cac so'))
-    }}
-    function check() {
-        let b = parseInt(prompt('nhap so can check'))
-        let check = false
-        for (let i = 0; i < 10; i++) {
-            if (a[i] === b) {
-                document.getElementById('result').innerHTML = b+ ' is in the array '+ "<br>"
-                check = true
-                break
-            }document.getElementById('result').innerHTML = a
+    while (true) {
+        let inp = prompt('nhap vao ')
+        if (inp == -1) {
+            break
         }
-        if (check === false) {
-            document.write(b + " is not in the array")
-        }
+        a.push(inp)
     }
+    let b = prompt('nhap vao so can xoa')
+    for (let i = 0; i < a.length; i++) {
+        let indexRemove = -1
+        if (b == a[i]) {
+            indexRemove = i;
+        }
+        if (indexRemove != -1) {
+            for (let j = indexRemove; j < a.length; j++) {
+                a[j] = a[j + 1]
+            }
+            a[a.length - 1] = 0
+            i--;
+        }
+    }document.write(a)
+
 
 </script>
 
